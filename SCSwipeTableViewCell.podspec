@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "SCSwipeTableViewCell"
   s.version      = "1.0.0"
-  s.summary      = "A tableViewCell With custom button like the system delete button"
+  s.summary      = "A tableViewCell With custom button like the system cell delete button"
 
   s.description  = <<-DESC
                    A longer description of SCSwipeTableViewCell in Markdown format.

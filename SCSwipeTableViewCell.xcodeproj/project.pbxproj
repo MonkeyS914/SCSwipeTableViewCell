@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5830D6E1C22636F00C96259 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830D6D1C22636F00C96259 /* main.m */; };
+		A5830D711C22636F00C96259 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830D701C22636F00C96259 /* AppDelegate.m */; };
+		A5830D741C22636F00C96259 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830D731C22636F00C96259 /* ViewController.m */; };
+		A5830D791C22636F00C96259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5830D781C22636F00C96259 /* Assets.xcassets */; };
+		A5830D7C1C22636F00C96259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5830D7A1C22636F00C96259 /* LaunchScreen.storyboard */; };
+		A5830D871C22636F00C96259 /* SCSwipeTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830D861C22636F00C96259 /* SCSwipeTableViewCellTests.m */; };
+		A5830D921C22636F00C96259 /* SCSwipeTableViewCellUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830D911C22636F00C96259 /* SCSwipeTableViewCellUITests.m */; };
+		A5830DA11C22639F00C96259 /* SCSwipeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5830DA01C22639F00C96259 /* SCSwipeTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5830D831C22636F00C96259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5830D611C22636F00C96259 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5830D681C22636F00C96259;
+			remoteInfo = SCSwipeTableViewCell;
+		};
+		A5830D8E1C22636F00C96259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5830D611C22636F00C96259 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5830D681C22636F00C96259;
+			remoteInfo = SCSwipeTableViewCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5830D691C22636F00C96259 /* SCSwipeTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCSwipeTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5830D6D1C22636F00C96259 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5830D6F1C22636F00C96259 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5830D701C22636F00C96259 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5830D721C22636F00C96259 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A5830D731C22636F00C96259 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A5830D781C22636F00C96259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5830D7B1C22636F00C96259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5830D7D1C22636F00C96259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5830D821C22636F00C96259 /* SCSwipeTableViewCellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCSwipeTableViewCellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5830D861C22636F00C96259 /* SCSwipeTableViewCellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSwipeTableViewCellTests.m; sourceTree = "<group>"; };
+		A5830D881C22636F00C96259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5830D8D1C22636F00C96259 /* SCSwipeTableViewCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCSwipeTableViewCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5830D911C22636F00C96259 /* SCSwipeTableViewCellUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCSwipeTableViewCellUITests.m; sourceTree = "<group>"; };
+		A5830D931C22636F00C96259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5830D9F1C22639F00C96259 /* SCSwipeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSwipeTableViewCell.h; sourceTree = "<group>"; };
+		A5830DA01C22639F00C96259 /* SCSwipeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSwipeTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5830D661C22636F00C96259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D7F1C22636F00C96259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D8A1C22636F00C96259 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5830D601C22636F00C96259 = {
+			isa = PBXGroup;
+			children = (
+				A5830D6B1C22636F00C96259 /* SCSwipeTableViewCell */,
+				A5830D851C22636F00C96259 /* SCSwipeTableViewCellTests */,
+				A5830D901C22636F00C96259 /* SCSwipeTableViewCellUITests */,
+				A5830D6A1C22636F00C96259 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5830D6A1C22636F00C96259 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5830D691C22636F00C96259 /* SCSwipeTableViewCell.app */,
+				A5830D821C22636F00C96259 /* SCSwipeTableViewCellTests.xctest */,
+				A5830D8D1C22636F00C96259 /* SCSwipeTableViewCellUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5830D6B1C22636F00C96259 /* SCSwipeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5830D6F1C22636F00C96259 /* AppDelegate.h */,
+				A5830D701C22636F00C96259 /* AppDelegate.m */,
+				A5830D721C22636F00C96259 /* ViewController.h */,
+				A5830D731C22636F00C96259 /* ViewController.m */,
+				A5830D9F1C22639F00C96259 /* SCSwipeTableViewCell.h */,
+				A5830DA01C22639F00C96259 /* SCSwipeTableViewCell.m */,
+				A5830D781C22636F00C96259 /* Assets.xcassets */,
+				A5830D7A1C22636F00C96259 /* LaunchScreen.storyboard */,
+				A5830D7D1C22636F00C96259 /* Info.plist */,
+				A5830D6C1C22636F00C96259 /* Supporting Files */,
+			);
+			path = SCSwipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		A5830D6C1C22636F00C96259 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5830D6D1C22636F00C96259 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5830D851C22636F00C96259 /* SCSwipeTableViewCellTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5830D861C22636F00C96259 /* SCSwipeTableViewCellTests.m */,
+				A5830D881C22636F00C96259 /* Info.plist */,
+			);
+			path = SCSwipeTableViewCellTests;
+			sourceTree = "<group>";
+		};
+		A5830D901C22636F00C96259 /* SCSwipeTableViewCellUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5830D911C22636F00C96259 /* SCSwipeTableViewCellUITests.m */,
+				A5830D931C22636F00C96259 /* Info.plist */,
+			);
+			path = SCSwipeTableViewCellUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5830D681C22636F00C96259 /* SCSwipeTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5830D961C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCell" */;
+			buildPhases = (
+				A5830D651C22636F00C96259 /* Sources */,
+				A5830D661C22636F00C96259 /* Frameworks */,
+				A5830D671C22636F00C96259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCSwipeTableViewCell;
+			productName = SCSwipeTableViewCell;
+			productReference = A5830D691C22636F00C96259 /* SCSwipeTableViewCell.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5830D811C22636F00C96259 /* SCSwipeTableViewCellTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5830D991C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCellTests" */;
+			buildPhases = (
+				A5830D7E1C22636F00C96259 /* Sources */,
+				A5830D7F1C22636F00C96259 /* Frameworks */,
+				A5830D801C22636F00C96259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5830D841C22636F00C96259 /* PBXTargetDependency */,
+			);
+			name = SCSwipeTableViewCellTests;
+			productName = SCSwipeTableViewCellTests;
+			productReference = A5830D821C22636F00C96259 /* SCSwipeTableViewCellTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A5830D8C1C22636F00C96259 /* SCSwipeTableViewCellUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5830D9C1C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCellUITests" */;
+			buildPhases = (
+				A5830D891C22636F00C96259 /* Sources */,
+				A5830D8A1C22636F00C96259 /* Frameworks */,
+				A5830D8B1C22636F00C96259 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5830D8F1C22636F00C96259 /* PBXTargetDependency */,
+			);
+			name = SCSwipeTableViewCellUITests;
+			productName = SCSwipeTableViewCellUITests;
+			productReference = A5830D8D1C22636F00C96259 /* SCSwipeTableViewCellUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5830D611C22636F00C96259 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Sunc;
+				TargetAttributes = {
+					A5830D681C22636F00C96259 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					A5830D811C22636F00C96259 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A5830D681C22636F00C96259;
+					};
+					A5830D8C1C22636F00C96259 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A5830D681C22636F00C96259;
+					};
+				};
+			};
+			buildConfigurationList = A5830D641C22636F00C96259 /* Build configuration list for PBXProject "SCSwipeTableViewCell" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5830D601C22636F00C96259;
+			productRefGroup = A5830D6A1C22636F00C96259 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5830D681C22636F00C96259 /* SCSwipeTableViewCell */,
+				A5830D811C22636F00C96259 /* SCSwipeTableViewCellTests */,
+				A5830D8C1C22636F00C96259 /* SCSwipeTableViewCellUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5830D671C22636F00C96259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5830D7C1C22636F00C96259 /* LaunchScreen.storyboard in Resources */,
+				A5830D791C22636F00C96259 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D801C22636F00C96259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D8B1C22636F00C96259 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5830D651C22636F00C96259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5830D741C22636F00C96259 /* ViewController.m in Sources */,
+				A5830D711C22636F00C96259 /* AppDelegate.m in Sources */,
+				A5830DA11C22639F00C96259 /* SCSwipeTableViewCell.m in Sources */,
+				A5830D6E1C22636F00C96259 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D7E1C22636F00C96259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5830D871C22636F00C96259 /* SCSwipeTableViewCellTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5830D891C22636F00C96259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5830D921C22636F00C96259 /* SCSwipeTableViewCellUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5830D841C22636F00C96259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5830D681C22636F00C96259 /* SCSwipeTableViewCell */;
+			targetProxy = A5830D831C22636F00C96259 /* PBXContainerItemProxy */;
+		};
+		A5830D8F1C22636F00C96259 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5830D681C22636F00C96259 /* SCSwipeTableViewCell */;
+			targetProxy = A5830D8E1C22636F00C96259 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5830D7A1C22636F00C96259 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5830D7B1C22636F00C96259 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5830D941C22636F00C96259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5830D951C22636F00C96259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5830D971C22636F00C96259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SCSwipeTableViewCell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5830D981C22636F00C96259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SCSwipeTableViewCell/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A5830D9A1C22636F00C96259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SCSwipeTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCSwipeTableViewCell.app/SCSwipeTableViewCell";
+			};
+			name = Debug;
+		};
+		A5830D9B1C22636F00C96259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SCSwipeTableViewCellTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCellTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCSwipeTableViewCell.app/SCSwipeTableViewCell";
+			};
+			name = Release;
+		};
+		A5830D9D1C22636F00C96259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SCSwipeTableViewCellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SCSwipeTableViewCell;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A5830D9E1C22636F00C96259 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SCSwipeTableViewCellUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = HUST.SCSwipeTableViewCellUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SCSwipeTableViewCell;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5830D641C22636F00C96259 /* Build configuration list for PBXProject "SCSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5830D941C22636F00C96259 /* Debug */,
+				A5830D951C22636F00C96259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5830D961C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5830D971C22636F00C96259 /* Debug */,
+				A5830D981C22636F00C96259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5830D991C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCellTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5830D9A1C22636F00C96259 /* Debug */,
+				A5830D9B1C22636F00C96259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5830D9C1C22636F00C96259 /* Build configuration list for PBXNativeTarget "SCSwipeTableViewCellUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5830D9D1C22636F00C96259 /* Debug */,
+				A5830D9E1C22636F00C96259 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5830D611C22636F00C96259 /* Project object */;
+}

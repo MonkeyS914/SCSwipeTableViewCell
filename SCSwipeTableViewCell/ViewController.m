@@ -60,7 +60,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return 15;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -88,9 +88,9 @@
                                                   withBtns:btnArr
                                                  tableView:_tableView];
         cell.delegate = self;
+        [cell.SCContentView addSubview:label];
     }
     
-    [cell.SCContentView addSubview:label];
     return cell;
 }
 

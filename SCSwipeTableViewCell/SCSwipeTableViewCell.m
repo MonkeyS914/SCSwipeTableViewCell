@@ -58,7 +58,14 @@
     [self addNotify];
 }
 
-#pragma initCell
+#pragma mark prepareForReuser
+- (void)prepareForReuse
+{
+    [self hideBtn];
+    [super prepareForReuse];
+}
+
+#pragma mark initCell
 
 - (void)setBtns{
     if (_rightBtnArr.count>0) {
@@ -110,7 +117,7 @@
     }
 }
 
-#pragma events,gesture and observe
+#pragma mark events,gesture and observe
 
 - (void)addNotify{
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -170,6 +177,9 @@
         case UIGestureRecognizerStateBegan:
             break;
         case UIGestureRecognizerStateChanged:
+            if (translation.y>10||translation.y<-10) {
+                return;
+            }
             if (_otherCellIsOpen&&!(_SCContentView.frame.origin.x == -_judgeWidth)) {
                 return;
             }
@@ -245,7 +255,7 @@
     }
 }
 
-#pragma showBtn hideBtn
+#pragma mark showBtn hideBtn
 
 - (void)showBtn{
     if (!(_SCContentView.frame.origin.x == -_judgeWidth)) {
@@ -322,6 +332,7 @@
     if ([_delegate respondsToSelector:@selector(SCSwipeTableViewCelldidSelectBtnWithTag:andIndexPath:)]) {
         [_delegate SCSwipeTableViewCelldidSelectBtnWithTag:sender.tag andIndexPath:indexPath];
     }
+    [self hideBtn];
 }
 
 #pragma mark - UIGestureRecognizerDelegate

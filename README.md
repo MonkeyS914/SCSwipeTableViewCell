@@ -4,6 +4,17 @@
 
 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
 
+------12.19初始版本v1.0.0------
+实现cell左滑后btn自定义
+可以监测btn的四个状态（willshow，didshow，willhide，didhide）和点击事件（clicked）
+
+------12.20更新v1.0.1------
+1.重写reuse方法，在进入队列后还原为初始状态
+2.optionBtn点击后，cell将会还原
+3.修复tableView上滑下滑时会展开cell的bug
+4.adjust btn height to cell height itself
+5.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
+
 ![image](https://raw.githubusercontent.com/MonkeyS914/SCSwipeTableViewCell/master/screenshort/1234.gif?2)
 
 安装方法：

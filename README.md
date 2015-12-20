@@ -6,23 +6,23 @@
 
 ------12.19初始版本v1.0.0------
 
-1.实现cell左滑后btn自定义
+     1.实现cell左滑后btn自定义
 
-2.可以监测btn的四个状态（willshow，didshow，willhide，didhide）和点击事件（clicked）
+     2.可以监测btn的四个状态（willshow，didshow，willhide，didhide）和点击事件（clicked）
 
 ------12.20更新v1.0.1------
 
-1.重写reuse方法，在进入队列后还原为初始状态
+     1.重写reuse方法，在进入队列后还原为初始状态
 
-2.optionBtn点击后，cell将会还原
+     2.optionBtn点击后，cell将会还原
 
-3.修复tableView上滑下滑时会展开cell的bug
+     3.修复tableView上滑下滑时会展开cell的bug
 
 ------12.20更新v1.0.2------
 
-1.adjust btn height to cell height itself
+     1.adjust btn height to cell height itself
 
-2.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
+     2.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
 
 ![image](https://raw.githubusercontent.com/MonkeyS914/SCSwipeTableViewCell/master/screenshort/1234.gif?2)
 

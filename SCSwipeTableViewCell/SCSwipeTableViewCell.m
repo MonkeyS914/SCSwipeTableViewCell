@@ -79,6 +79,9 @@
 - (void)processBtns{
     CGFloat lastWidth = 0;
     int i = 0;
+    NSIndexPath *indexPath = [_superTableView indexPathForCell:self];
+     self.cellHeight = [_superTableView rectForRowAtIndexPath:indexPath].size.height;
+    
     for (UIButton *temBtn in _rightBtnArr)
     {
         temBtn.tag = i;
@@ -89,8 +92,10 @@
         if (!_judgeWidth) {
             _judgeWidth = lastWidth;
         }
-        if (_cellHeight<temBtn.frame.size.height) {
-            _cellHeight = temBtn.frame.size.height;
+        if (_cellHeight != temBtn.frame.size.height) {
+            CGRect frame = temBtn.frame;
+            frame.size.height = _cellHeight;
+            temBtn.frame = frame;
         }
         [temBtn addTarget:self action:@selector(cellBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -177,8 +182,11 @@
         case UIGestureRecognizerStateBegan:
             break;
         case UIGestureRecognizerStateChanged:
-            if (translation.y>10||translation.y<-10) {
+            if (fabs(translation.x)<fabs(translation.y)) {
+                _superTableView.scrollEnabled = YES;
                 return;
+            }else{
+                _superTableView.scrollEnabled = NO;
             }
             if (_otherCellIsOpen&&!(_SCContentView.frame.origin.x == -_judgeWidth)) {
                 return;
@@ -202,6 +210,7 @@
             break;
             
         case UIGestureRecognizerStateEnded:
+            _superTableView.scrollEnabled = YES;
             if (_otherCellIsOpen&&!(_SCContentView.frame.origin.x == -_judgeWidth)) {
                 [[NSNotificationCenter defaultCenter]postNotificationName:@"SC_CELL_SHOULDCLOSE" object:nil userInfo:@{@"action":@"closeCell"}];
                 return;
@@ -211,6 +220,7 @@
             break;
             
         case UIGestureRecognizerStateCancelled:
+            _superTableView.scrollEnabled = YES;
             //cancell
             [self SCContentViewStop];
             break;
@@ -234,7 +244,6 @@
 }
 
 - (void)SCContentViewStop{
-    self.superTableView.scrollEnabled = YES;
     if ((_SCContentView.frame.origin.x == -_judgeWidth)) {
         //btn is shown
         if (_SCContentView.frame.origin.x + _judgeWidth<0) {

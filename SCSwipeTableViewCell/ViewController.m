@@ -35,6 +35,13 @@
 
 - (void)SCSwipeTableViewCelldidSelectBtnWithTag:(NSInteger)tag andIndexPath:(NSIndexPath *)indexpath{
     NSLog(@"you choose the %ldth btn in section %ld row %ld",(long)tag,(long)indexpath.section,(long)indexpath.row);
+    NSString *message = [NSString stringWithFormat:@"you choose the %ldth btn in section %ld row %ld",(long)tag,(long)indexpath.section,(long)indexpath.row ];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"tips"
+                                                   message:message
+                                                  delegate:self
+                                         cancelButtonTitle:@"ok"
+                                         otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)cellOptionBtnWillShow{
@@ -78,7 +85,6 @@
     btnArr = [[NSMutableArray alloc]initWithObjects:btn1,btn2, nil];
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
-    label.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
     
     static NSString *cellIdentifier = @"Cell";
     SCSwipeTableViewCell *cell = (SCSwipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -89,6 +95,10 @@
                                                  tableView:_tableView];
         cell.delegate = self;
         [cell.SCContentView addSubview:label];
+    }
+    
+    for (UILabel *subLabel in cell.SCContentView.subviews) {
+        subLabel.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
     }
     
     return cell;

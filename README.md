@@ -34,32 +34,54 @@ import SCSwipeTableViewCell.h
 
 在tableViewCell的delegate里面实现自定义cell的侧滑btn
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
     
     UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 55)];
+    
     btn1.backgroundColor = [UIColor redColor];
+    
     [btn1 setTitle:@"delete" forState:UIControlStateNormal];
+    
     UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+    
     btn2.backgroundColor = [UIColor greenColor];
+    
     [btn2 setTitle:@"add" forState:UIControlStateNormal];
+    
     btnArr = [[NSMutableArray alloc]initWithObjects:btn1,btn2, nil];
     
+    
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
+    
     label.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
     
+    
     static NSString *cellIdentifier = @"Cell";
+    
     SCSwipeTableViewCell *cell = (SCSwipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
     if (cell == nil) {
+    
         cell = [[SCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        
                                            reuseIdentifier:@"Cell"
+                                           
                                                   withBtns:btnArr
+                                                  
                                                  tableView:_tableView];
+                                                 
         cell.delegate = self;
+        
     }
     
+    
     [cell.SCContentView addSubview:label];
+    
     return cell;
+    
 } 
+
 
 II 在pod 上search SCSwipeTableViewCell直接安装
 

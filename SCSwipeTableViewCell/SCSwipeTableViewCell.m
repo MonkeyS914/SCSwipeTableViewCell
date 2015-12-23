@@ -199,20 +199,15 @@
             }else{
                 _superTableView.scrollEnabled = NO;
             }
-            if (_otherCellIsOpen&&!(_SCContentView.frame.origin.x == -_judgeWidth)) {
+            if (_otherCellIsOpen) {
                 return;
             }
             //contentoffse changed
             if (translation.x<0) {
-                //SCContentView is moving towards left
-                if (_SCContentView.frame.origin.x == -_judgeWidth) {
-                    //close cell
-                    [self hideBtn];
+                if (self.SCContentView.frame.origin.x==_rightfinalWidth) {
+                    translation.x = self.SCContentView.frame.origin.x;
                 }
-                else if (_SCContentView.frame.origin.x > -_judgeWidth){
-                    //open cell
-                    [self moveSCContentView:translation.x];
-                }
+                [self moveSCContentView:translation.x];
             }
             else if (translation.x>0){
                 //SCContentView is moving towards right
@@ -266,7 +261,7 @@
         }
     }
     else{
-        if (_SCContentView.frame.origin.x+10>0) {
+        if (_SCContentView.frame.origin.x+_judgeWidth>0) {
             [self hideBtn];
         }
         else{

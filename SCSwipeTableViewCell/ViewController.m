@@ -67,7 +67,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 15;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -113,7 +113,7 @@
     }
     
     NSString *message = [NSString stringWithFormat:@"you choose cell in section %ld row %ld"
-                         ,indexPath.section,indexPath.row ];
+                         ,(long)indexPath.section,(long)indexPath.row ];
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"tips"
                                                    message:message
                                                   delegate:self

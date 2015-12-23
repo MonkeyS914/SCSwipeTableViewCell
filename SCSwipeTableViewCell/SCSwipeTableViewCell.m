@@ -13,7 +13,8 @@
 @interface SCSwipeTableViewCell()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, retain)UIView  *cellContentView;
-@property (nonatomic, retain)UIPanGestureRecognizer *panGersture;
+@property (nonatomic, retain)UIPanGestureRecognizer *panGesture;
+@property (nonatomic, retain)UITapGestureRecognizer *tapGesture;
 @property (nonatomic, assign)CGFloat judgeWidth;
 @property (nonatomic, assign)CGFloat rightfinalWidth;
 @property (nonatomic, assign)CGFloat cellHeight;
@@ -110,16 +111,12 @@
 - (void)setScrollView{
     _SCContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SC_SCREEN_WIDTH, _cellHeight)];
     _SCContentView.backgroundColor = [UIColor whiteColor];
+    
     [self.contentView addSubview:_SCContentView];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    if (!_isRightBtnShow) {
-        [[NSNotificationCenter defaultCenter]postNotificationName:@"SC_CELL_SHOULDCLOSE" object:nil userInfo:@{@"action":@"closeCell"}];
-    }
-    else{
-        [self hideBtn];
-    }
+    [self hideBtn];
 }
 
 #pragma mark events,gesture and observe
@@ -166,17 +163,31 @@
 }
 
 - (void)addGesture{
-    _panGersture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
-    _panGersture.delegate = self;
-    [self.SCContentView addGestureRecognizer:_panGersture];
+    _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
+    _panGesture.delegate = self;
+    [self.SCContentView addGestureRecognizer:_panGesture];
+    
+    _tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cellTaped:)];
+    _tapGesture.delegate = self;
+    [self.SCContentView addGestureRecognizer:_tapGesture];
+}
+
+- (void)cellTaped:(UITapGestureRecognizer *)recognizer{
+    if (_otherCellIsOpen) {
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"SC_CELL_SHOULDCLOSE" object:nil userInfo:@{@"action":@"closeCell"}];
+    }
+    else{
+        NSIndexPath *indexPath = [self.superTableView indexPathForCell:self];
+        [self.superTableView.delegate tableView:self.superTableView didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 - (void)handleGesture:(UIPanGestureRecognizer *)recognizer{
     if (_isShowing||_isHiding) {
         return;
     }
-    CGPoint translation = [_panGersture translationInView:self];
-    CGPoint location = [_panGersture locationInView:self];
+    CGPoint translation = [_panGesture translationInView:self];
+    CGPoint location = [_panGesture locationInView:self];
     NSLog(@"translation----(%f)----loaction(%f)",translation.x,location.y);
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan:

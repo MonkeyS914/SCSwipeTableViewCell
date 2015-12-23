@@ -67,7 +67,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 15;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -111,6 +111,15 @@
     {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
     }
+    
+    NSString *message = [NSString stringWithFormat:@"you choose cell in section %ld row %ld"
+                         ,indexPath.section,indexPath.row ];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"tips"
+                                                   message:message
+                                                  delegate:self
+                                         cancelButtonTitle:@"ok"
+                                         otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {

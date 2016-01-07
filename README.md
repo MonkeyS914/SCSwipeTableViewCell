@@ -1,6 +1,6 @@
 # SCSwipeTableViewCell
-侧滑导航栏
-# SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自动定义btn
+
+# SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自定义btn
 
 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
 

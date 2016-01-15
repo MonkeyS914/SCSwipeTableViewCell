@@ -2,19 +2,19 @@
 
 # SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自定义btn
 
-# 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
+### 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
 
-#------12.23更新v1.0.3------
+###------12.23更新v1.0.3------
 
      fix the bug(didSelectRowAtIndexPath didn't respond)
 
-#------12.20更新v1.0.2------
+###------12.20更新v1.0.2------
 
      1.adjust btn height to cell height itself
 
      2.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
 
-#------12.20更新v1.0.1------
+###------12.20更新v1.0.1------
 
      1.重写reuse方法，在进入队列后还原为初始状态
 
@@ -39,9 +39,8 @@ import SCSwipeTableViewCell.h
 
 在tableViewCell的delegate里面实现自定义cell的侧滑btn
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    
     UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 55)];
     
     btn1.backgroundColor = [UIColor redColor];

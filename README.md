@@ -2,19 +2,19 @@
 
 # SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自定义btn
 
-支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
+# 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
 
-------12.23更新v1.0.3------
+#------12.23更新v1.0.3------
 
      fix the bug(didSelectRowAtIndexPath didn't respond)
 
-------12.20更新v1.0.2------
+#------12.20更新v1.0.2------
 
      1.adjust btn height to cell height itself
 
      2.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
 
-------12.20更新v1.0.1------
+#------12.20更新v1.0.1------
 
      1.重写reuse方法，在进入队列后还原为初始状态
 
@@ -22,7 +22,7 @@
 
      3.修复tableView上滑下滑时会展开cell的bug
 
-------12.19初始版本v1.0.0------
+#------12.19初始版本v1.0.0------
 
      1.实现cell左滑后btn自定义
 
@@ -31,7 +31,7 @@
 
 ![image](https://raw.githubusercontent.com/MonkeyS914/SCSwipeTableViewCell/master/screenshort/1234.gif?2)
 
-安装方法：
+# 安装方法：
 
 I 下载zip压缩包，把SCSwipeTableViewCell文件夹拖到自己工程下面 
 

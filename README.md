@@ -31,7 +31,7 @@
 
 ![image](https://raw.githubusercontent.com/MonkeyS914/SCSwipeTableViewCell/master/screenshort/1234.gif?2)
 
-# 安装方法：
+### 安装方法：
 
 I 下载zip压缩包，把SCSwipeTableViewCell文件夹拖到自己工程下面 
 

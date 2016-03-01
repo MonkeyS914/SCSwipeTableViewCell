@@ -7,23 +7,23 @@
 [![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 
 
-### 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
+ 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
 
-###------3.1更新v1.0.4------
+------3.1更新v1.0.4------
 
   感谢[kallyWang](https://github.com/kallyWang)发现的bug，关于cellheight错乱问题，已经fixed
 
-###------12.23更新v1.0.3------
+------12.23更新v1.0.3------
 
   fix the bug(didSelectRowAtIndexPath didn't respond)
 
-###------12.20更新v1.0.2------
+------12.20更新v1.0.2------
 
   1.adjust btn height to cell height itself
 
   2.judge the condition with translation.x and translation.y on when to enable tablevieW scroll and when to enbale cell animation
 
-###------12.20更新v1.0.1------
+------12.20更新v1.0.1------
 
   1.重写reuse方法，在进入队列后还原为初始状态
 
@@ -31,7 +31,7 @@
 
   3.修复tableView上滑下滑时会展开cell的bug
 
-###------12.19初始版本v1.0.0------
+------12.19初始版本v1.0.0------
 
   1.实现cell左滑后btn自定义
 

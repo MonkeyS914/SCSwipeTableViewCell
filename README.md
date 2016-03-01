@@ -1,8 +1,16 @@
 # SCSwipeTableViewCell
 
 # SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自定义btn
+==============
+
+[![CocoaPods](http://img.shields.io/cocoapods/p/SCSwipeTableViewCell.svg?style=flat)](http://cocoapods.org/?q= SCSwipeTableViewCell)&nbsp;
+[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 
 ### 支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
+
+###------3.1更新v1.0.4------
+
+感谢[kallyWang](https://github.com/kallyWang)发现的bug，关于cellheight错乱问题，已经fixed
 
 ###------12.23更新v1.0.3------
 
@@ -32,6 +40,7 @@
 ![image](https://raw.githubusercontent.com/MonkeyS914/SCSwipeTableViewCell/master/screenshort/1234.gif?2)
 
 ### 安装方法：
+==============
 
 I 下载zip压缩包，把SCSwipeTableViewCell文件夹拖到自己工程下面 
 

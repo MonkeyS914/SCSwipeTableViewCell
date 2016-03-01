@@ -63,6 +63,7 @@
 - (id)initWithStyle:(UITableViewCellStyle)style
     reuseIdentifier:(NSString *)reuseIdentifier
            withBtns:(NSArray *)arr
-          tableView:(UITableView *)tableView;
+          tableView:(UITableView *)tableView
+      cellIndexPath:(NSIndexPath *)indexPath;
 
 @end

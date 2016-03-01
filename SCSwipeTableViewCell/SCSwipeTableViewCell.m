@@ -39,12 +39,16 @@
 - (id)initWithStyle:(UITableViewCellStyle)style
               reuseIdentifier:(NSString *)reuseIdentifier
                      withBtns:(NSArray *)arr
-          tableView:(UITableView *)tableView
+          tableView:(UITableView *)tableView cellIndexPath:(NSIndexPath *)indexPath
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _rightBtnArr = [NSArray arrayWithArray:arr];
         self.superTableView = tableView;
+        self.cellHeight = [_superTableView rectForRowAtIndexPath:indexPath].size.height;
+        
+        NSLog(@"%f",self.cellHeight);
+        
         [self prepareForCell];
         self.selectionStyle = UITableViewCellSelectionStyleNone;//set default select style
     }
@@ -80,8 +84,6 @@
 - (void)processBtns{
     CGFloat lastWidth = 0;
     int i = 0;
-    NSIndexPath *indexPath = [_superTableView indexPathForCell:self];
-     self.cellHeight = [_superTableView rectForRowAtIndexPath:indexPath].size.height;
     
     for (UIButton *temBtn in _rightBtnArr)
     {
@@ -90,9 +92,11 @@
         temRect.origin.x = SC_SCREEN_WIDTH - temRect.size.width - lastWidth;
         temBtn.frame = temRect;
         lastWidth = lastWidth + temBtn.frame.size.width;
+        
         if (!_judgeWidth) {
             _judgeWidth = lastWidth;
         }
+        
         if (_cellHeight != temBtn.frame.size.height) {
             CGRect frame = temBtn.frame;
             frame.size.height = _cellHeight;
@@ -102,7 +106,6 @@
         
         [self.contentView addSubview:temBtn];
         i++;
-
     }
     _rightfinalWidth = lastWidth;
     self.contentView.backgroundColor = [UIColor whiteColor];
@@ -113,6 +116,7 @@
     _SCContentView.backgroundColor = [UIColor whiteColor];
     
     [self.contentView addSubview:_SCContentView];
+    self.contentView.clipsToBounds = YES;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{

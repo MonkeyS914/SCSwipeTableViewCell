@@ -63,45 +63,61 @@
 
 #pragma mark UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 15;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return 212;
+    }
+    
     return 88;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 55)];
-    btn1.backgroundColor = [UIColor redColor];
-    [btn1 setTitle:@"delete" forState:UIControlStateNormal];
-    UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
-    btn2.backgroundColor = [UIColor greenColor];
-    [btn2 setTitle:@"add" forState:UIControlStateNormal];
-    btnArr = [[NSMutableArray alloc]initWithObjects:btn1,btn2, nil];
-    
-    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
-    
-    static NSString *cellIdentifier = @"Cell";
-    SCSwipeTableViewCell *cell = (SCSwipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[SCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                           reuseIdentifier:@"Cell"
-                                                  withBtns:btnArr
-                                                 tableView:_tableView];
-        cell.delegate = self;
-        [cell.SCContentView addSubview:label];
+    if (indexPath.section == 0) {
+        static NSString *cellIdentifier = @"DefacultCell";
+        UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        
+        return cell;
     }
-    
-    for (UILabel *subLabel in cell.SCContentView.subviews) {
-        subLabel.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
+    else{
+        UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 55)];
+        btn1.backgroundColor = [UIColor redColor];
+        [btn1 setTitle:@"delete" forState:UIControlStateNormal];
+        UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+        btn2.backgroundColor = [UIColor greenColor];
+        [btn2 setTitle:@"add" forState:UIControlStateNormal];
+        btnArr = [[NSMutableArray alloc]initWithObjects:btn1,btn2, nil];
+        
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
+        
+        static NSString *cellIdentifier = @"Cell";
+        SCSwipeTableViewCell *cell = (SCSwipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            cell = [[SCSwipeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                               reuseIdentifier:@"Cell"
+                                                      withBtns:btnArr
+                                                     tableView:_tableView
+                                                 cellIndexPath:indexPath];
+            cell.delegate = self;
+            [cell.SCContentView addSubview:label];
+        }
+        
+//        for (UILabel *subLabel in cell.SCContentView.subviews) {
+            label.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
+//        }
+        
+        return cell;
     }
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

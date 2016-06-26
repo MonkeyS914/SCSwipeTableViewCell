@@ -177,12 +177,10 @@
 }
 
 - (void)cellTaped:(UITapGestureRecognizer *)recognizer{
+    NSIndexPath *indexPath = [self.superTableView indexPathForCell:self];
+    [self.superTableView.delegate tableView:self.superTableView didSelectRowAtIndexPath:indexPath];
     if (_otherCellIsOpen) {
         [[NSNotificationCenter defaultCenter]postNotificationName:@"SC_CELL_SHOULDCLOSE" object:nil userInfo:@{@"action":@"closeCell"}];
-    }
-    else{
-        NSIndexPath *indexPath = [self.superTableView indexPathForCell:self];
-        [self.superTableView.delegate tableView:self.superTableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

@@ -67,12 +67,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 2;
+    return 20;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 212;
+        return 160;
     }
     
     return 88;
@@ -98,8 +98,6 @@
         [btn2 setTitle:@"add" forState:UIControlStateNormal];
         btnArr = [[NSMutableArray alloc]initWithObjects:btn1,btn2, nil];
         
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
-        
         static NSString *cellIdentifier = @"Cell";
         SCSwipeTableViewCell *cell = (SCSwipeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (cell == nil) {
@@ -109,12 +107,35 @@
                                                      tableView:_tableView
                                                  cellIndexPath:indexPath];
             cell.delegate = self;
+            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, 55)];
+            label.tag = 10086;
             [cell.SCContentView addSubview:label];
         }
         
-//        for (UILabel *subLabel in cell.SCContentView.subviews) {
-            label.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
-//        }
+        if (indexPath.row == 3) {
+            UIButton *btn1 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 80, 55)];
+            btn1.backgroundColor = [UIColor redColor];
+            [btn1 setTitle:@"delete" forState:UIControlStateNormal];
+            UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+            btn2.backgroundColor = [UIColor greenColor];
+            [btn2 setTitle:@"add" forState:UIControlStateNormal];
+            UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+            btn3.backgroundColor = [UIColor greenColor];
+            [btn3 setTitle:@"add" forState:UIControlStateNormal];
+            cell.rightBtnArr = @[btn1,btn2,btn3];
+        }
+        else{
+            UIButton *btn2 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+            btn2.backgroundColor = [UIColor greenColor];
+            [btn2 setTitle:@"add" forState:UIControlStateNormal];
+            UIButton *btn3 = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 60, 55)];
+            btn3.backgroundColor = [UIColor greenColor];
+            [btn3 setTitle:@"add" forState:UIControlStateNormal];
+            cell.rightBtnArr = @[btn2,btn3];
+        }
+        
+        UILabel *label = [cell.SCContentView viewWithTag:10086];
+        label.text = [NSString stringWithFormat:@"swipeCell test row %ld",(long)indexPath.row];
         
         return cell;
     }

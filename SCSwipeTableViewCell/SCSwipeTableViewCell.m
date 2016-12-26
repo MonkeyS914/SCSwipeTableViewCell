@@ -59,15 +59,41 @@
     [self setBtns];
     [self setScrollView];
     [self addObserverEvent];
-    [self addGesture];
     [self addNotify];
 }
 
 #pragma mark prepareForReuser
 - (void)prepareForReuse
 {
-    [self hideBtn];
+    if ((_SCContentView.frame.origin.x == -_judgeWidth)) {
+        if (!_isHiding) {
+            [self cellWillHide];
+            _isHiding = YES;
+        }
+    }
+    _superTableView.userInteractionEnabled = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        CGRect temRect = _SCContentView.frame;
+        temRect.origin.x = 0;
+        _SCContentView.frame = temRect;
+    } completion:^(BOOL finished) {
+        if (_isRightBtnShow) {
+            [self cellDidHide];
+            _isHiding = NO;
+        }
+    }];
     [super prepareForReuse];
+}
+
+#pragma mark setter
+- (void)setRightBtnArr:(NSArray *)rightBtnArr{
+    _rightBtnArr = rightBtnArr;
+    for (UIView *view in self.contentView.subviews) {
+        if ([view isKindOfClass:[UIButton class]]) {
+            [view removeFromSuperview];
+        }
+    }
+    [self setBtns];
 }
 
 #pragma mark initCell
@@ -104,7 +130,12 @@
         }
         [temBtn addTarget:self action:@selector(cellBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
-        [self.contentView addSubview:temBtn];
+        if (_SCContentView) {
+            [self.contentView insertSubview:temBtn belowSubview:_SCContentView];
+        }
+        else{
+            [self.contentView addSubview:temBtn];
+        }
         i++;
     }
     _rightfinalWidth = lastWidth;
@@ -112,11 +143,22 @@
 }
 
 - (void)setScrollView{
+    if (_SCContentView) {
+        return;
+    }
     _SCContentView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SC_SCREEN_WIDTH, _cellHeight)];
-    _SCContentView.backgroundColor = [UIColor whiteColor];
+    _SCContentView.backgroundColor = [UIColor yellowColor];
     
     [self.contentView addSubview:_SCContentView];
     self.contentView.clipsToBounds = YES;
+    
+    _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
+    _panGesture.delegate = self;
+    [self.SCContentView addGestureRecognizer:_panGesture];
+    
+    _tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cellTaped:)];
+    _tapGesture.delegate = self;
+    [self.SCContentView addGestureRecognizer:_tapGesture];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -158,22 +200,12 @@
         CGPoint oldpoint = [[change objectForKey:@"old"] CGPointValue];
         CGPoint newpoint = [[change objectForKey:@"new"] CGPointValue];
         if (oldpoint.y!=newpoint.y) {
-            NSLog(@"---sueperTabelViewMoves---");
+//            NSLog(@"---sueperTabelViewMoves---");
             if ((_SCContentView.frame.origin.x == -_judgeWidth)) {
                 [self hideBtn];
             }
         }
     }
-}
-
-- (void)addGesture{
-    _panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handleGesture:)];
-    _panGesture.delegate = self;
-    [self.SCContentView addGestureRecognizer:_panGesture];
-    
-    _tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(cellTaped:)];
-    _tapGesture.delegate = self;
-    [self.SCContentView addGestureRecognizer:_tapGesture];
 }
 
 - (void)cellTaped:(UITapGestureRecognizer *)recognizer{
@@ -189,8 +221,8 @@
         return;
     }
     CGPoint translation = [_panGesture translationInView:self];
-    CGPoint location = [_panGesture locationInView:self];
-    NSLog(@"translation----(%f)----loaction(%f)",translation.x,location.y);
+//    CGPoint location = [_panGesture locationInView:self];
+//    NSLog(@"translation----(%f)----loaction(%f)",translation.x,location.y);
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan:
             break;

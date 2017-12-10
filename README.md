@@ -2,9 +2,6 @@
 
 # SCSwipeTableViewCell  仿QQ tableViewCell 侧滑自定义btn
 ==============
-[![CocoaPods](http://img.shields.io/cocoapods/v/SCSwipeTableViewCell.svg?style=flat)](http://cocoapods.org/?q= SCSwipeTableViewCell)&nbsp;
-[![CocoaPods](http://img.shields.io/cocoapods/p/SCSwipeTableViewCell.svg?style=flat)](http://cocoapods.org/?q= SCSwipeTableViewCell)&nbsp;
-[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)&nbsp;
 
 
  支持iOS6.0以上，最新测试系统iPhone6 iOS9.2
